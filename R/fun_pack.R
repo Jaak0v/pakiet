@@ -1,3 +1,16 @@
+#' Funkcja Jakuba
+#'
+#' @param a
+#' @param b
+#' @param d
+#'
+#' @return
+#'
+#' @examples
+#'
+#' @export
+
+
 fun_pack <- function(a = 10, b = 20, d = 2){
 
   out <- sqrt((a/2)*b*d/2 + 100)
