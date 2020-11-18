@@ -1,25 +1,51 @@
-#' Funkcja Jakuba
+#' Obliczenia emisji spalin - Jakub Kaczmarski
 #'
-#' @param a
-#' @param b
-#' @param d
+#' @param dane
+#' @param kategoria
+#' @param euro
+#' @param mode
+#' @param substancja
 #'
 #' @return
+#' @import dplyr tidyverse
+#' @export
 #'
 #' @examples
-#'
-#' @export
+
+fun_pack <- function(dane = input,
+                     kategoria = "Passenger Cars",
+                     paliwo = "Petrol",
+                     segment = "Mini",
+                     euro = "Euro 5",
+                     technologia = "GDI",
+                     mode = "",
+                     substancja = c("EC", "CO")) {
 
 
-fun_pack <- function(a = 10, b = 20, d = 2){
 
-  out <- sqrt((a/2)*b*d/2 + 100)
-  out <- rnorm(n = round(out, 0)) %>%
-    as.data.frame()
+  out <- wskazniki %>%
+    filter(Category %in% kategoria) %>%
+    filter(Fuel %in% paliwo) %>%
+    filter(Euro.Standard %in% euro) %>%
+    filter(Technology %in% technologia) %>%
+    filter(Pollutant %in% substancja) %>%
+    filter(Mode %in% mode)
+
+  out <- inner_join(x = out, y = input, by = "Segment","Fuel")
 
   out <- out %>%
-    summarise(mean = mean(., na.rm = T))
+    mutate(Emisja = Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))/
+                             (Epsilon * Procent ^ 2 + Zita * Procent + Hta) * (1-Reduction))
+    ) %>%
+    select(Category, Fuel, Euro.Standard, Technology, Pollutant, Mode, Segment, Nat, Emisja)
 
   return(out)
+
 }
+
+
+
+library(pakiet)
+
+pakiet::fun_pack()
 

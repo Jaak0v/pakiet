@@ -1,15 +1,23 @@
 Package: pakiet
-Title: What the Package Does (One Line, Title Case)
+Title: Nie robi nic ciekawego, ale działa, sprawdzam drugi raz a teraz trzeci
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Jakub",
+           family = "Kaczmarski",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "jkacz@student.agh.edu.pl",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Ten pakiet cos robi, ale to sie jeszcze zobaczy co??
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat
+Depends: 
+    tidyverse,
+    dplyr,
+    base,
+    stats
+
