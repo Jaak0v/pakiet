@@ -44,7 +44,6 @@ fun_pack <- function(dane = input,
 }
 
 
-
 library(pakiet)
 
 pakiet::fun_pack()
