@@ -19,5 +19,6 @@ Depends:
     tidyverse,
     dplyr,
     base,
-    stats
+    stats,
+    ggplot2,
 

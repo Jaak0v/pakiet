@@ -2,19 +2,23 @@
 % Please edit documentation in R/fun_pack.R
 \name{fun_pack}
 \alias{fun_pack}
-\title{Funkcja Jakuba}
+\title{Obliczenia emisji spalin}
 \usage{
-fun_pack(a = 10, b = 20, d = 2)
+fun_pack(
+  dane = input,
+  kategoria = "Passenger Cars",
+  paliwo = "Petrol",
+  euro = "Euro 5",
+  mode = "",
+  substancja = c("CO", "EC")
+)
 }
 \arguments{
-\item{d}{}
+\item{substancja}{}
 }
 \value{
 
 }
 \description{
-Funkcja Jakuba
-}
-\examples{
-
+Obliczenia emisji spalin
 }
