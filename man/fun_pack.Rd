@@ -13,7 +13,15 @@ fun_pack(
 )
 }
 \arguments{
-\item{substancja}{}
+\item{dane}{dataframe}
+
+\item{kategoria}{character}
+
+\item{euro}{character}
+
+\item{mode}{character}
+
+\item{substancja}{character}
 }
 \value{
 

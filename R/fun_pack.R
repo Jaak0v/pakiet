@@ -1,10 +1,10 @@
 #' Obliczenia emisji spalin
 #'
-#' @param dane
-#' @param kategoria
-#' @param euro
-#' @param mode
-#' @param substancja
+#' @param dane dataframe
+#' @param kategoria character
+#' @param euro character
+#' @param mode character
+#' @param substancja character
 #'
 #' @return
 #' @import dplyr tidyverse ggplot2
@@ -28,7 +28,7 @@ fun_pack <- function(dane = input,
 
   out <- inner_join(x = out, y = input, by = c("Segment","Fuel","Technology"))
 
-  out <- out %>%
+  out <- na.omit(out) %>%
     mutate(Emisja = Nat * ((Alpha * Procent ^ 2 + Beta * Procent + Gamma + (Delta/Procent))/
                              (Epsilon * Procent ^ 2 + Zita * Procent + Hta) * (1-Reduction))
     ) %>%
