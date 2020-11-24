@@ -7,7 +7,6 @@
 fun_pack(
   dane = input,
   kategoria = "Passenger Cars",
-  paliwo = "Petrol",
   euro = "Euro 5",
   mode = "",
   substancja = c("CO", "EC")

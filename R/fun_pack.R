@@ -34,8 +34,8 @@ fun_pack <- function(dane = input,
     ) %>%
     select(Category, Fuel, Euro.Standard, Technology, Pollutant, Mode, Segment, Emisja, Nat)
 
+  out <<- out
   return(out)
-
 }
 
 wykres <- function(dane = input,
@@ -61,7 +61,26 @@ wykres <- function(dane = input,
     ) %>%
     select(Fuel)
 
-
+  emi <<- emi
   return(emi)
 
+}
+
+wykres2 <- function(){
+  data <- emi
+
+  # Compute percentages
+  data$fraction = data$count / sum(data$count)
+
+  # Compute the cumulative percentages (top of each rectangle)
+  data$ymax = cumsum(data$fraction)
+
+  # Compute the bottom of each rectangle
+  data$ymin = c(0, head(data$ymax, n=-1))
+
+  # Make the plot
+  ggplot(data, aes(ymax=ymax, ymin=ymin, xmax=4, xmin=3, fill=category)) +
+    geom_rect() +
+    coord_polar(theta="y") + # Try to remove that to understand how the chart is built initially
+    xlim(c(2, 4))
 }
