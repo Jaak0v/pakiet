@@ -1,0 +1,29 @@
+---
+title: "test_pakiet"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{test_pakiet}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+**Jakub Kaczmarski**
+
+**e-mail:** *[jkacz@student.agh.edu.pl](jkacz@student.agh.edu.pl)*.
+
+***
+# Wprowadzenie
+***
+
+
+```{r setup}
+library(pakiet)
+```

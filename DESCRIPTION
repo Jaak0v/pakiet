@@ -1,24 +1,27 @@
 Package: pakiet
-Title: Nie robi nic ciekawego, ale działa, sprawdzam drugi raz a teraz trzeci
+Title: Analiza i wizualizacja danych dotyczacych ruchu drogowego
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Jakub",
-           family = "Kaczmarski",
+    person("Jakub",
+           "Kaczmarski",
            role = c("aut", "cre"),
            email = "jkacz@student.agh.edu.pl",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Ten pakiet cos robi, ale to sie jeszcze zobaczy co??
+Description: Selekcjonuje dane dotyczace zanieczyszczenia powietrza przez pojazdy, a nastepnie dla wybranych kategorii oblicza wskaznik emisji.
+    W graficznej postaci przedstawia uzyskane wartosci wskaznika emisji.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
 Depends: 
     tidyverse,
     dplyr,
     base,
     stats,
     ggplot2,
-
+VignetteBuilder: knitr

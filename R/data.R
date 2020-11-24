@@ -1,12 +1,12 @@
 #' Wskazniki emisji z transportu drogowego EEA
 #'
-#'@source Odmety internetu (EEA) \url{https://www.agh.edu.pl}
+#'@source Europejska Agencja Srodowiska (EEA) \url{https://www.eea.europa.eu/}
 #'
 #' @examples
 #' \dontrun{
 #'  wskazniki
-#'  input
+#'
 #'
 #' }
 "wskazniki"
-"input"
+
