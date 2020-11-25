@@ -1,3 +1,13 @@
+#' Stworzenie wykresu
+#'
+#'
+#' @return
+#' @import dplyr tidyverse ggplot2
+#' @export
+#'
+#' @examples
+
+
 wykres <- function(out,x,y) {
 
   x <- enquo(x)
