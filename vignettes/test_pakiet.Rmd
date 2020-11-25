@@ -22,6 +22,18 @@ knitr::opts_chunk$set(
 ***
 # Wprowadzenie
 ***
+Dane, na których pracujesz nasza funkcja dostpne sa na stronie [Europejska Agencja Srodowiska](https://www.eea.europa.eu/).
+
+***
+# Sposob instalacji
+***
+
+Pakiet znajduje si na portalu [github](https://github.com/), przez co konieczne jest zainstalowanie pakietu `devtools`, sluzacego do pobierania i instalacji znajdujacych sie na portalu repozytoriow. 
+
+```{r setup, eval=FALSE}
+install_git("https://github.com/Jaak0v/pakiet")
+library(pakiet)
+```
 
 
 ```{r setup}
