@@ -1,4 +1,3 @@
-
 wykres <- function(out,x,y) {
 
   x <- enquo(x)
