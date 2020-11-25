@@ -7,7 +7,7 @@
 #' @param substancja character
 #'
 #' @return
-#' @import dplyr tidyverse ggplot2
+#' @import dplyr tidyverse ggplot2 magnittr
 #' @export
 #'
 #' @examples
@@ -25,6 +25,7 @@ fun_pack <- function(dane = input,
     filter(Pollutant %in% substancja) %>%
     filter(Mode %in% mode)
     #filter(Fuel %in% paliwo)
+    #filter(Segment %in% segment)
 
   out <- inner_join(x = out, y = input, by = c("Segment","Fuel","Technology"))
 

@@ -34,8 +34,3 @@ Pakiet znajduje si na portalu [github](https://github.com/), przez co konieczne 
 install_git("https://github.com/Jaak0v/pakiet")
 library(pakiet)
 ```
-
-
-```{r setup}
-library(pakiet)
-```

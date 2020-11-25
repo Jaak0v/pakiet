@@ -2,7 +2,7 @@
 #'
 #'
 #' @return
-#' @import dplyr tidyverse ggplot2
+#' @import dplyr tidyverse ggplot2 magnittr
 #' @export
 #'
 #' @examples
@@ -13,5 +13,5 @@ wykres <- function(out,x,y) {
   x <- enquo(x)
   y <- enquo(y)
 
-  ggplot(out)+ geom_boxplot(out, mapping = aes(!!x, !!y)) }
+  ggplot()+ geom_boxplot(out, mapping = aes(!!x, !!y)) + theme_bw() }
 

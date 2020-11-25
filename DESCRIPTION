@@ -24,4 +24,5 @@ Depends:
     base,
     stats,
     ggplot2,
+    magrittr,
 VignetteBuilder: knitr
