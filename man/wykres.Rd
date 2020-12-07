@@ -6,8 +6,15 @@
 \usage{
 wykres(out, x, y)
 }
-\value{
+\arguments{
+\item{out}{double}
 
+\item{x}{double}
+
+\item{y}{double}
+}
+\value{
+plot
 }
 \description{
 Stworzenie wykresu

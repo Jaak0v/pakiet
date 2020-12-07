@@ -6,7 +6,7 @@
 #' @param mode character
 #' @param substancja character
 #'
-#' @return
+#' @return dataframe
 #' @import dplyr tidyverse ggplot2 magrittr
 #' @export
 #'

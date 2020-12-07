@@ -24,7 +24,7 @@ fun_pack(
 \item{substancja}{character}
 }
 \value{
-
+dataframe
 }
 \description{
 Obliczenia emisji spalin
