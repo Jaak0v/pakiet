@@ -18,7 +18,10 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of pakiet is to ...
+Celem pakietu `giosimport` jest pobieranie i wczytywanie danych z **Portal Jakości Powietrza GIOŚ**. Funkcje zawarte w pakiecie tworzą plikową bazę danych na dysku lokalnym. Cała baza danych może zajmować prawie 700 MB. Istnieje możliwość pobierania tylko wybranych części plikowej bazy danych. W tym przypadku dane są pobierane dla każdego roku oddzielnie. Dostępne dane historyczne nie są aktualizowane, więc wystarczy je pobrać tylko raz. Warto umieścić je w odpowiedniej lokalizacji, by nie powielać pobierania danych. W celu korzystania z pkaietu `giosimport` zapozanj się z [RPubs](https://rpubs.com/rzeszut/giosimport)
+
+[Portal Jakości Powietrza GIOŚ](http://powietrze.gios.gov.pl/pjp/home) udostępnia [Bank Danych Pomiarowych](http://powietrze.gios.gov.pl/pjp/home) który zawiera wyniki pomiarów stężeń zanieczyszczeń powietrza w Polsce, poczynając od 2010 r.
+
 
 ## Installation
 
@@ -39,7 +42,7 @@ devtools::install_github("Jaak0v/pakiet")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(pakiet)
+#library(pakiet)
 ## basic example code
 ```
 
