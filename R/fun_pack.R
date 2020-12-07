@@ -7,7 +7,7 @@
 #' @param substancja character
 #'
 #' @return
-#' @import dplyr tidyverse ggplot2 magnittr
+#' @import dplyr tidyverse ggplot2 magrittr
 #' @export
 #'
 #' @examples
